@@ -1,4 +1,4 @@
-import debug from "debug";
+import debug from "debug";mineflayer-collectblock
 import minecraftData from "minecraft-data";
 import mineflayer from "mineflayer";
 import { mineflayer as mineflayerViewer } from "prismarine-viewer";
@@ -9,6 +9,7 @@ import {
   loadContext,
   clearContext,
 } from "./context/index.js";
+import collectBlock from "mineflayer-collectblock";
 import collectBlock from "mineflayer-collectblock";
 
 //@ts-ignore
