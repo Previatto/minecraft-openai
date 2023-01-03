@@ -1,5 +1,8 @@
 export default [
   `
+// What is your purpose?
+bot.chat("I'm just a bot!");
+
 // Go forward
 bot.setControlState('forward', true);
 
