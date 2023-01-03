@@ -57,3 +57,54 @@ export async function mineBlock (bot, type, mcData, count = 1) {
     bot.chat(err.message);
   }
 }
+
+export async function placeBlock2 (bot, type, mcData, target) {
+  const blockType = mcData.blocksByName[type];
+  if (!blockType) {
+    bot.chat(`Unknown block type: ${type}`);
+    return;
+  }
+  /*
+  bot.chat(`${bot.heldItem}`)
+ 
+  bot.chat(`${bot.heldItem.type}`)
+  */
+   bot.chat(`${blockType.name}`);
+   bot.chat(`${bot.heldItem.name}`);
+
+  if (bot.heldItem && bot.heldItem.name  == blockType.name) {
+    bot.chat(`I have block type: ${type}`);
+  }
+  else{
+    bot.chat(`I dont have block type: ${type}`);
+  }
+
+  //bot.placeBlock(bot.heldItem, bot.position);
+
+  //const blocks = bot.findBlocks({
+  //  matching: blockType.id,
+  //  maxDistance: 128,
+  //  count: count
+  //});
+  /*
+  if (blocks.length === 0) {
+    bot.chat("I don't see that block nearby.");
+    return;
+  }
+
+  const targets = [];
+  for (let i = 0; i < count; i++) {
+    targets.push(bot.blockAt(blocks[i]));
+  }
+
+  bot.chat(`I found ${targets.length} ${type} blocks`);
+
+  try {
+    await bot.placeBlock.(targets);
+    bot.chat('Done');
+
+  } catch (err) {
+    bot.chat(err.message);
+  }
+  */
+}

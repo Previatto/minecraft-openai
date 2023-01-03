@@ -72,6 +72,9 @@ giveToPlayer (bot, "dirt", target, 2);
 // Drop 1 dirt
 giveToPlayer (bot, "dirt", target, 1);
 
+// place 1 dirt block
+placeBlock2(bot, "dirt", mcData, 1)
+
 // Get 4 oak logs
 mineBlock(bot, "oak_log", mcData, 4);
 
