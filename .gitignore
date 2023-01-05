@@ -4,3 +4,10 @@ node_modules
 .vs/ProjectSettings.json
 .vs/VSWorkspaceState.json
 .vs/slnx.sqlite
+.idea/aws.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/minecraft-openai.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml

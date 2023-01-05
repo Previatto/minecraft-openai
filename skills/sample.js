@@ -64,11 +64,11 @@ export async function placeBlock2 (bot, type, mcData, target) {
     bot.chat(`Unknown block type: ${type}`);
     return;
   }
-  /*
-  bot.chat(`${bot.heldItem}`)
+
+  bot.chat(`${bot.heldItem}`);
  
-  bot.chat(`${bot.heldItem.type}`)
-  */
+  bot.chat(`${bot.heldItem.type}`);
+
    bot.chat(`${blockType.name}`);
    bot.chat(`${bot.heldItem.name}`);
 
@@ -79,7 +79,14 @@ export async function placeBlock2 (bot, type, mcData, target) {
     bot.chat(`I dont have block type: ${type}`);
   }
 
-  //bot.placeBlock(bot.heldItem, bot.position);
+//  try {
+    await bot._genericPlace(bot.heldItem, bot.position);
+    bot.chat('Done');
+
+//  } catch (err) {
+//    bot.chat(err.message);
+//  }
+
 
   //const blocks = bot.findBlocks({
   //  matching: blockType.id,
